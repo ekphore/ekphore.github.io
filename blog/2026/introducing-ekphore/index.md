@@ -2,7 +2,7 @@
 title: Introducing ekphore!
 authors: [govanify]
 tags: [announcement]
-date: 2026-10-16
+date: 2026-10-23
 slug: /2026/introducing-ekphore
 image: /img/logo.svg
 ---
