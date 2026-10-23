@@ -1,0 +1,49 @@
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--ek-border);
+  border-radius: 10px;
+  background: var(--ek-surface);
+  color: var(--ek-text);
+  transition: background 120ms, border-color 120ms;
+}
+
+.platform:hover {
+  border-color: var(--ek-accent);
+  color: var(--ek-text);
+  text-decoration: none;
+}
+
+.preferred {
+  background: var(--ek-accent-soft);
+  border-color: var(--ek-accent);
+}
+
+.platformLabel {
+  font-weight: 700;
+}
+
+.platformFormats {
+  margin-top: 0.35rem;
+  color: var(--ek-muted);
+  font-size: 0.72rem;
+}
+
+.platformDetail {
+  color: var(--ek-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+}

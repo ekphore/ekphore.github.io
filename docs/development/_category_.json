@@ -1,0 +1,9 @@
+{
+  "label": "Development",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/development",
+    "description": "Building ekphore and its libraries from source."
+  }
+}

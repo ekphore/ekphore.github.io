@@ -1,0 +1,117 @@
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 1.6rem;
+}
+
+.card {
+  padding: 1.6rem 1.7rem;
+  margin-bottom: 1.4rem;
+  border: 1px solid var(--ek-border);
+  border-radius: 14px;
+  background: var(--ek-surface-raised);
+}
+
+.card h2 {
+  margin-bottom: 0.3rem;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.blurb {
+  margin: 0;
+  color: var(--ek-muted);
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  color: var(--ek-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.details {
+  margin-top: 0.9rem;
+}
+
+.details summary {
+  cursor: pointer;
+  color: var(--ek-text);
+  font-weight: 600;
+}
+
+.releaseBody {
+  margin-top: 0.7rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  background: var(--ek-surface);
+  font-size: 0.9rem;
+}
+
+.releaseBody > :last-child {
+  margin-bottom: 0;
+}
+
+.notes {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.table th {
+  text-align: left;
+}
+
+.table tr:nth-child(2n) {
+  background: transparent;
+}
+
+.assetLinks a + a {
+  margin-left: 0.9rem;
+}
+
+.pre {
+  margin-left: 0.5rem;
+  color: var(--ek-warm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.clone {
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .cardHead {
+    flex-direction: column;
+  }
+
+  .version {
+    align-items: flex-start;
+  }
+}

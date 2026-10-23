@@ -1,0 +1,170 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Gauvain "GovanifY" Roussel-Tarbouriech <gauvain@govanify.com>
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* the dark palette is taken from the library browser in src/ui/browser.cpp */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ifm-font-family-base: "Open Sans", system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-color-primary: #6b4f7a;
+  --ifm-color-primary-dark: #604770;
+  --ifm-color-primary-darker: #5b4369;
+  --ifm-color-primary-darkest: #4b3756;
+  --ifm-color-primary-light: #765784;
+  --ifm-color-primary-lighter: #7c5b8b;
+  --ifm-color-primary-lightest: #8d6a9c;
+  --ifm-background-color: #faf8fb;
+  --ifm-navbar-background-color: #f3eff5;
+  --ifm-footer-background-color: #eee8f0;
+  --ifm-card-background-color: #ffffff;
+  --ifm-global-radius: 10px;
+  --ifm-button-border-radius: 10px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+
+  --ek-surface: #ffffff;
+  --ek-surface-raised: #f3eff5;
+  --ek-border: #e0d7e4;
+  --ek-text: #291e2e;
+  --ek-muted: #6f6176;
+  --ek-accent: #6b4f7a;
+  --ek-accent-soft: #e9dfee;
+  --ek-warm: #b5683b;
+  --ek-sleeve: #a6b4b0;
+  --ek-sleeve-edge: #5fcfbe;
+
+  /* links take the sleeve teal: lilac sits too close to the body text */
+  --ifm-link-color: #0a7466;
+  --ifm-link-hover-color: #075a4f;
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #d7bfdd;
+  --ifm-color-primary-dark: #cbaad3;
+  --ifm-color-primary-darker: #c5a0ce;
+  --ifm-color-primary-darkest: #b282be;
+  --ifm-color-primary-light: #e3d4e7;
+  --ifm-color-primary-lighter: #e9deec;
+  --ifm-color-primary-lightest: #f5effa;
+  --ifm-background-color: #1d1a20;
+  --ifm-background-surface-color: #242129;
+  --ifm-navbar-background-color: #242129;
+  --ifm-footer-background-color: #171519;
+  --ifm-card-background-color: #2b262f;
+  --ifm-font-color-base: #eee8f0;
+  --ifm-toc-border-color: #3b3440;
+  --ifm-hr-background-color: #3b3440;
+  --ifm-table-border-color: #3b3440;
+  --ifm-code-background: #2b262f;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ek-surface: #2b262f;
+  --ek-surface-raised: #302735;
+  --ek-border: #3b3440;
+  --ek-text: #f5f0f6;
+  --ek-muted: #ac9db2;
+  --ek-accent: #d7bfdd;
+  --ek-accent-soft: #4a3b52;
+  --ek-warm: #f0bd98;
+
+  --ifm-link-color: #7fe0cf;
+  --ifm-link-hover-color: #aef3e4;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ek-border);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #171519;
+  --ifm-footer-link-color: #beb3c4;
+  --ifm-footer-title-color: #f5f0f6;
+  border-top: 1px solid #3b3440;
+}
+
+.footer__copyright {
+  color: #9d91a5;
+  font-size: 0.85rem;
+}
+
+.button--primary {
+  --ifm-button-color: #291e2e;
+}
+
+[data-theme="light"] .button--primary {
+  --ifm-button-color: #ffffff;
+}
+
+/* tags as in the library browser, eg NKI / PRE */
+.ek-tag {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  background: var(--ek-accent-soft);
+  color: var(--ek-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.markdown h2 {
+  margin-top: 2.2rem;
+}
+
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist) {
+  background: var(--ek-accent-soft);
+}
+
+/* OS logos in docs tab labels, as on pcsx2.net */
+.tab_header_with_icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+/* underline links in prose so they don't rely on colour alone */
+.markdown a,
+.theme-doc-markdown a,
+article p a,
+article li a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+.markdown a:hover,
+.theme-doc-markdown a:hover,
+article p a:hover,
+article li a:hover {
+  text-decoration-color: currentColor;
+}

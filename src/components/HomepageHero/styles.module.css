@@ -1,0 +1,229 @@
+/* the app window always uses the dark UI palette, whatever the site theme */
+
+.window {
+  width: 100%;
+  border: 1px solid #1b1e20;
+  border-radius: 6px 6px 4px 4px;
+  overflow: hidden;
+  background: #1d1a20;
+  color: #f5f0f6;
+  box-shadow: 0 30px 80px rgba(20, 10, 30, 0.45);
+  font-size: 0.78rem;
+  user-select: none;
+}
+
+/* Breeze Dark window decoration, as on Plasma */
+.titlebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 0.45rem;
+  background: #2a2e32;
+  border-bottom: 1px solid #1b1e20;
+}
+
+.appIcon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.titleText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fcfcfc;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+.control,
+.close {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #fcfcfc;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.close circle {
+  fill: #fcfcfc;
+  stroke: none;
+}
+
+.close path {
+  stroke: #2a2e32;
+}
+
+.appHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  background: #242129;
+  border-bottom: 1px solid #3b3440;
+}
+
+.appName {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.appTagline {
+  color: #ac9db2;
+  font-size: 0.72rem;
+}
+
+.appBody {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.sidebar,
+.list {
+  min-width: 0;
+}
+
+.libraryTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.collection,
+.sound {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.55rem;
+  margin-bottom: 0.4rem;
+  border-radius: 8px;
+  background: #2b262f;
+}
+
+.selected {
+  background: #4a3b52;
+}
+
+.art {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.art_all {
+  background: #8b7494;
+}
+
+.art_a {
+  background: linear-gradient(135deg, #f1ece4, #b7a99c);
+}
+
+.art_b {
+  background: linear-gradient(135deg, #6c5bc4, #2b2148 60%, #e87b58);
+}
+
+.art_c {
+  background: linear-gradient(135deg, #8ad3d8, #3c6e8c);
+}
+
+.art_d {
+  background: linear-gradient(135deg, #e8c45a, #6d4b1f);
+}
+
+.rowName {
+  display: block;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowSub {
+  display: block;
+  color: #ac9db2;
+  font-size: 0.68rem;
+}
+
+.search {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #3b3440;
+  border-radius: 9px;
+  background: #2b262f;
+  color: #9d91a5;
+  margin-bottom: 0.55rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filters {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.filters span {
+  flex: 1;
+  text-align: center;
+  padding: 0.25rem 0;
+  border-radius: 7px;
+  background: #2b262f;
+  color: #b0a2ba;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.filters .filterOn {
+  background: #4a3b52;
+  color: #e3cce9;
+}
+
+.soundText {
+  flex: 1;
+  min-width: 0;
+}
+
+.soundTag {
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  background: #3e3445;
+  color: #d7bfdd;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.star {
+  color: #6f6176;
+}
+
+.starOn {
+  color: #e3cce9;
+}
+
+@media (max-width: 600px) {
+  .appBody {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
