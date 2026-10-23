@@ -15,7 +15,6 @@ order to make it work.
 
 ## Supported devices
 
-- Kontrol S32
 - Komplete Kontrol S49 MK3
 - Komplete Kontrol S61 MK3
 - Komplete Kontrol S88 MK3
