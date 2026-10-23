@@ -42,6 +42,19 @@ const config = {
         crossorigin: "anonymous",
       },
     },
+    // not every browser takes an svg favicon (safari mostly), so ship pngs and /favicon.ico too
+    {
+      tagName: "link",
+      attributes: { rel: "icon", type: "image/png", sizes: "32x32", href: "/img/favicon-32.png" },
+    },
+    {
+      tagName: "link",
+      attributes: { rel: "icon", type: "image/png", sizes: "192x192", href: "/img/favicon-192.png" },
+    },
+    {
+      tagName: "link",
+      attributes: { rel: "apple-touch-icon", sizes: "180x180", href: "/img/apple-touch-icon.png" },
+    },
   ],
 
   presets: [
